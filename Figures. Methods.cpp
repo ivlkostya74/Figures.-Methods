@@ -368,6 +368,32 @@ public:
 		Quadrilateral::nameOfFigure = "Ромб";
 	}
 };
+void printFigure(Figure& figure)
+{
+
+
+	figure.printFigure();
+	/*std::cout << std::endl;
+	std::cout << figure.getNameOfFigure() << ":" << std::endl;
+
+	std::cout << "Стороны:";
+	std::cout << " a = " << figure.getSideLengthA() << ", b = " << figure.getSideLengthB() << ", с = " << figure.getSideLengthC();
+	if (figure.getSides()==3)
+	{
+		std::cout << ", d = " << figure.getSideLengthD() << std::endl;
+	}
+	else { std::cout << std::endl; }
+
+	std::cout << "Углы:";
+	std::cout << " А = " << figure.getAngleA() << ", В = " << figure.getAngleB() << ", С = " << figure.getAngleC();
+	if (figure.getSides()==4) { std::cout << ", D = " << figure.getAngleD() << std::endl; }
+	else { std::cout << std::endl; }*/
+}
+
+//
+//Parent* par_child = &child;
+//par_child->method(); // Потомок
+//Родитель
 int main()
 {
 	setlocale(LC_ALL, "Russian"); //Корректное отображение Кириллицы
@@ -377,34 +403,34 @@ int main()
 	Figure1.printFigure();
 
 	Triangle Triangle1(10, 20, 30, 50, 60, 70);
-	Triangle1.printFigure();
+	printFigure(Triangle1);
 
 	rightTriangle rightTriangle1(10, 20, 30, 50, 60, 90);
-	rightTriangle1.printFigure();
+	printFigure(rightTriangle1);
 
 	rightTriangle rightTriangle2(10, 20, 30, 50, 40, 90);
-	rightTriangle2.printFigure();
+	printFigure(rightTriangle2);
 
 	isoscelesTriangle isoscelesTriangle1(10, 20, 10, 50, 60, 90);
-	isoscelesTriangle1.printFigure();
+	printFigure(isoscelesTriangle1);
 
 	equilateralTriangle equilateralTriangle1(30, 30, 30, 60, 60, 60);
-	equilateralTriangle1.printFigure();
+	printFigure(equilateralTriangle1);
 
 	Quadrilateral Quadrilateral1(10, 20, 30, 40, 50, 60, 70, 80);
-	Quadrilateral1.printFigure();
+	printFigure(Quadrilateral1);
 
 	Rectangle Rectangle1(10, 20, 10, 20, 90, 90, 90, 90);
-	Rectangle1.printFigure();
+	printFigure(Rectangle1);
 
 	Square Square1(20, 20, 20, 20, 90, 90, 90, 90);
-	Square1.printFigure();
+	printFigure(Square1);
 
 	Parallelogram Parallelogram1(20, 30, 20, 30, 30, 40, 30, 40);
-	Parallelogram1.printFigure();
+	printFigure(Parallelogram1);
 
 	Rhomb Rhomb1(30, 30, 30, 30, 30, 40, 30, 40);
-	Rhomb1.printFigure();
+	printFigure(Rhomb1);
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
